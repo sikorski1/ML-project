@@ -1,2 +1,4 @@
 images/
 SOT
+venv
+.ipynb_checkpoints/
