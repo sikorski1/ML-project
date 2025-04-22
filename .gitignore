@@ -1,4 +1,6 @@
-images/
+datasets/
 SOT
 venv
 .ipynb_checkpoints/
+runs
+yolo*
