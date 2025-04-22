@@ -1,0 +1,13 @@
+train: roboflow/train/images
+val: roboflow/valid/images
+test: roboflow/test/images
+
+nc: 1
+names: ['human']
+
+roboflow:
+  workspace: drowning-detection
+  project: person-detection-in-water
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/drowning-detection/person-detection-in-water/dataset/2
