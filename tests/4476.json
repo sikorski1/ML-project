@@ -1,0 +1,34 @@
+[
+    {
+      "predictions": {
+        "image": {
+          "width": 3840,
+          "height": 2160
+        },
+        "predictions": [
+          {
+            "width": 187,
+            "height": 183,
+            "x": 1076.5,
+            "y": 1033.5,
+            "confidence": 0.6901007890701294,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "a0252de0-0299-4a76-8649-6a0d94f9d9ab",
+            "parent_id": "image"
+          },
+          {
+            "width": 165,
+            "height": 118,
+            "x": 2215.5,
+            "y": 1148,
+            "confidence": 0.4631494879722595,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "df70c499-5790-47f4-932e-ac508e680677",
+            "parent_id": "image"
+          }
+        ]
+      }
+    }
+  ]

@@ -1,0 +1,56 @@
+[
+    {
+      "predictions": {
+        "image": {
+          "width": 1280,
+          "height": 1707
+        },
+        "predictions": [
+          {
+            "width": 55,
+            "height": 87,
+            "x": 94.5,
+            "y": 421.5,
+            "confidence": 0.7344983816146851,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "ef8dfc81-a3ce-4cfc-b6ef-4a84622b12e7",
+            "parent_id": "image"
+          },
+          {
+            "width": 1176,
+            "height": 924,
+            "x": 692,
+            "y": 1245,
+            "confidence": 0.6278603076934814,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "73d03742-6e14-433a-8186-023049566341",
+            "parent_id": "image"
+          },
+          {
+            "width": 43,
+            "height": 76,
+            "x": 384.5,
+            "y": 412,
+            "confidence": 0.6257403492927551,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "bbedcaa8-976c-43df-94cd-288f47231d19",
+            "parent_id": "image"
+          },
+          {
+            "width": 179,
+            "height": 86,
+            "x": 111.5,
+            "y": 597,
+            "confidence": 0.4600037932395935,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "e1be791d-a9a8-4a63-bdc5-e2ba358ff8b3",
+            "parent_id": "image"
+          }
+        ]
+      }
+    }
+  ]

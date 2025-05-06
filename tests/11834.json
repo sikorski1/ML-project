@@ -1,0 +1,23 @@
+[
+    {
+      "predictions": {
+        "image": {
+          "width": 3840,
+          "height": 2160
+        },
+        "predictions": [
+          {
+            "width": 122,
+            "height": 146,
+            "x": 2155,
+            "y": 1008,
+            "confidence": 0.5526078343391418,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "5e703e43-d4e0-4253-a805-07b30d5c2603",
+            "parent_id": "image"
+          }
+        ]
+      }
+    }
+  ]

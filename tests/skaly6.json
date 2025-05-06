@@ -1,0 +1,45 @@
+[
+    {
+      "predictions": {
+        "image": {
+          "width": 3024,
+          "height": 4032
+        },
+        "predictions": [
+          {
+            "width": 133,
+            "height": 208,
+            "x": 222.5,
+            "y": 994,
+            "confidence": 0.7436307668685913,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "1ddb0e2b-8f24-4817-9185-83b9cb7be7aa",
+            "parent_id": "image"
+          },
+          {
+            "width": 101,
+            "height": 190,
+            "x": 908.5,
+            "y": 981,
+            "confidence": 0.6277649402618408,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "d09953d7-2107-47fd-97c9-e5ba52bc0f49",
+            "parent_id": "image"
+          },
+          {
+            "width": 423,
+            "height": 204,
+            "x": 264.5,
+            "y": 1407,
+            "confidence": 0.5568185448646545,
+            "class_id": 0,
+            "class": "human",
+            "detection_id": "99975000-2a45-4621-8fa3-fd660a3606af",
+            "parent_id": "image"
+          }
+        ]
+      }
+    }
+  ]
