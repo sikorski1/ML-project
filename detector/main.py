@@ -10,12 +10,10 @@ except ImportError:
     sys.exit(1)
 
 def validate_file_path(file_path):
-    """Check if file exists and has appropriate extension"""
     if not os.path.exists(file_path):
         print(f"Error: File {file_path} does not exist!")
         return False
-    
-    # Allowed extensions
+ 
     valid_extensions = {'.jpg', '.jpeg', '.png', '.bmp', '.tiff', '.webp', 
                        '.mp4', '.avi', '.mov', '.mkv', '.wmv', '.flv', '.webm'}
     
@@ -28,11 +26,14 @@ def validate_file_path(file_path):
     return True
 
 def is_video_file(file_path):
-    """Check if file is a video"""
     video_extensions = {'.mp4', '.avi', '.mov', '.mkv', '.wmv', '.flv', '.webm'}
     return Path(file_path).suffix.lower() in video_extensions
 
-def process_file(model, file_path, output_dir, confidence=0.5):
+def get_model_folder_name(model_path):
+    model_name = Path(model_path).stem 
+    return model_name
+
+def process_file(model, file_path, output_dir, model_folder_name, confidence=0.25):
     print(f"Processing file: {file_path}")
 
     results = model.predict(
@@ -40,7 +41,7 @@ def process_file(model, file_path, output_dir, confidence=0.5):
         conf=confidence,
         save=True,
         project=output_dir,
-        name="detection",
+        name=model_folder_name,  
         exist_ok=True
     )
     
@@ -62,7 +63,7 @@ def process_file(model, file_path, output_dir, confidence=0.5):
     else:
         print(f"Total detections: {total_detections} objects")
     
-    print(f"Results saved in directory: {output_dir}/detection/")
+    print(f"Results saved in directory: {output_dir}/{model_folder_name}/")
 
 def main():
     parser = argparse.ArgumentParser(description="YOLO Object Detection")
@@ -100,14 +101,17 @@ def main():
             if custom_model:
                 print(f"Custom model '{custom_model}' not found, using default: {model_name}")
     
+    model_folder_name = get_model_folder_name(model_name)
+    print(f"Results will be saved in folder: {model_folder_name}")
+    
     try:
         print(f"Loading model: {model_name}")
         model = YOLO(model_name) 
         print("Model loaded successfully!")
-        if model_name != "yolov10n.pt":
+        if model_name != "yolov8n.pt":
             print(f"Model classes: {list(model.names.values())}")
         
-        process_file(model, file_path, args.output, args.confidence)
+        process_file(model, file_path, args.output, model_folder_name, args.confidence)
             
     except Exception as e:
         print(f"Error during processing: {str(e)}")
